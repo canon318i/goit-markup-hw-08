@@ -1,40 +1,37 @@
 .skills {
-  &__list {
-    display: flex;
-  }
+  display: flex;
+}
 
-  &__item {
-    flex-basis: calc((100% - 3 * var(--flex-margin)) / 4);
-  }
-
-  &__item:not(:last-child) {
+.skills__item {
+  flex-basis: calc((100% - 3 * var(--flex-margin)) / 4);
+  &:not(:last-child) {
     margin-right: var(--flex-margin);
   }
+}
 
-  &__icon {
-    @include flex();
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    height: 120px;
-    background-color: var(--alt-bkg-color);
-    border-radius: 4px;
-  }
+.skills__icon {
+  @include flex();
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  height: 120px;
+  background-color: var(--alt-bkg-color);
+  border-radius: 4px;
+}
 
-  &__hdr {
-    margin-top: 30px;
-    margin-bottom: 10px;
+.skills__hdr {
+  margin-top: 30px;
+  margin-bottom: 10px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    text-transform: uppercase;
-    color: var(--primary-header-color);
-  }
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  color: var(--primary-header-color);
+}
 
-  &__text {
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    color: var(--primary-text-color);
-  }
+.skills__text {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  color: var(--primary-text-color);
 }

@@ -1,11 +1,11 @@
 .header {
   border-bottom: 1px solid var(--header-border);
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &__logo {
-    margin-right: 93px;
-  }
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  margin-right: 93px;
 }
