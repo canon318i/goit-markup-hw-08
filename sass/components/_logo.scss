@@ -1,0 +1,15 @@
+.logo {
+  display: inline-block;
+
+  color: var(--logo-black);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  &--accent {
+    color: var(--accent-color);
+  }
+  &--white {
+    color: var(--logo-white);
+  }
+}

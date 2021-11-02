@@ -1,0 +1,38 @@
+.mission {
+  &__section {
+    padding-top: 0px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 2 * var(--flex-margin)) / 3);
+
+    &:not(:last-child) {
+      margin-right: var(--flex-margin);
+    }
+  }
+  &__img {
+    flex-basis: calc(100% / 3 - var(--flex-margin));
+  }
+
+  &__text {
+    height: 70px;
+    width: 100%;
+    padding: 27px 0;
+
+    position: absolute;
+    bottom: 0;
+
+    background: rgba(47, 48, 58, 0.8);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+  }
+}

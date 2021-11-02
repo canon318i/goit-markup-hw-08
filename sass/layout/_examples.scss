@@ -1,0 +1,73 @@
+.examples {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--flex-margin));
+    margin-left: calc(-1 * var(--flex-margin));
+  }
+
+  &__item {
+    margin-top: var(--flex-margin);
+    margin-left: var(--flex-margin);
+  }
+
+  &__link {
+    display: block;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &__info {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--card-border);
+    border-right: 1px solid var(--card-border);
+    border-left: 1px solid var(--card-border);
+  }
+  &__header {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(36 / 18);
+    letter-spacing: 0.06em;
+    color: var(--primary-header-color);
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    color: var(--primary-text-color);
+  }
+
+  &__img {
+    flex-basis: calc(100% / 3 - var(--flex-margin));
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 63px 24px;
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    background: rgba(33, 150, 243, 0.9);
+
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    color: var(--secondary-text-color);
+  }
+
+  &__link:hover &__overlay,
+  &__link:focus &__overlay {
+    transform: translateY(-100%);
+  }
+}

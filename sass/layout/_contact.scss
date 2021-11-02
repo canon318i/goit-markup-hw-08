@@ -1,0 +1,34 @@
+.contact {
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    fill: currentColor;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
