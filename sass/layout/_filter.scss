@@ -1,9 +1,20 @@
 .filter {
-  @include flex();
-  // display: flex;
-  // justify-content: center;
-  margin-bottom: 50px;
+  // @include flex();
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+  }
 }
+
+.filter__item {
+  margin-bottom: 15px;
+}
+
 .filter__item:not(:last-child) {
   margin-right: 8px;
 }
