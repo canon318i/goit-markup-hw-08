@@ -5,7 +5,10 @@
   // justify-content: center;
 }
 .nav__list {
-  display: flex;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 .nav__item:not(:last-child) {
   margin-right: 50px;

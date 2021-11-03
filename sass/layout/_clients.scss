@@ -1,11 +1,19 @@
 .clients {
   display: flex;
+  flex-wrap: wrap;
+  margin: calc(0px - var(--flex-margin) / 2);
 }
 
 .clients__item {
-  flex-basis: calc((100% - 3 * var(--flex-margin)) / 4);
-  &:not(:last-child) {
-    margin-right: var(--flex-margin);
+  margin: calc(var(--flex-margin) / 2);
+  flex-basis: calc((100% - 2 * var(--flex-margin)) / 2);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 3 * var(--flex-margin)) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 6 * var(--flex-margin)) / 6);
   }
 }
 

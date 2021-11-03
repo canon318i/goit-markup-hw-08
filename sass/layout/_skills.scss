@@ -1,11 +1,23 @@
 .skills {
   display: flex;
+  flex-wrap: wrap;
+  margin: calc(0px - var(--flex-margin) / 2);
+
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
 }
 
 .skills__item {
-  flex-basis: calc((100% - 3 * var(--flex-margin)) / 4);
-  &:not(:last-child) {
-    margin-right: var(--flex-margin);
+  margin: calc(var(--flex-margin) / 2);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * var(--flex-margin)) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * var(--flex-margin)) / 4);
   }
 }
 
@@ -22,12 +34,15 @@
 .skills__hdr {
   margin-top: 30px;
   margin-bottom: 10px;
-
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
   text-transform: uppercase;
   color: var(--primary-header-color);
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .skills__text {
