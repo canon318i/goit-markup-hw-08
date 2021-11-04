@@ -862,7 +862,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .contact__item:not(:last-child) {
     margin-bottom: 10px;
   }
