@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-width: 304px; //320px - 16px на вертиальный скроллбар
 
   @media screen and (min-width: 480px) {
     max-width: 480px;

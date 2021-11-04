@@ -21,7 +21,7 @@
   }
 }
 .hero__hdr {
-  width: 360px;
+  max-width: 360px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
@@ -34,7 +34,7 @@
   color: var(--secondary-text-color);
 
   @media screen and (min-width: 1200px) {
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: calc(60 / 44);
   }

@@ -8,18 +8,23 @@
   }
 }
 .subscribe__label {
-  display: inline-block;
+  display: block;
   @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
   }
   @media screen and (min-width: 1200px) {
+    display: inline-block;
     margin-right: 12px;
   }
 }
 .subscribe__input {
   display: inline-block;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   height: 50px;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
   @media screen and (min-width: 1200px) {
     width: 358px;
   }
