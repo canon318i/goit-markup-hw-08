@@ -489,18 +489,6 @@ body {
 
 .mobile-menu__link--current {
   color: var(--accent-color);
-  position: relative;
-}
-
-.mobile-menu__link--current::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
 }
 
 .mobile-links {
@@ -710,7 +698,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 
@@ -720,15 +708,9 @@ body {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer__contacts {
     margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer__contacts {
-    flex-basis: 50%;
   }
 }
 
@@ -743,21 +725,21 @@ body {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer__social {
     margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer__social {
-    flex-basis: 50%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer__social {
     margin-right: 93px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-subscribe {
+    margin-top: 60px;
   }
 }
 
@@ -898,8 +880,13 @@ body {
 
 .filter {
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter {
+    flex-wrap: wrap;
+    margin: -7px -4px 27px -4px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -910,12 +897,16 @@ body {
   }
 }
 
-.filter__item {
-  margin-bottom: 15px;
+@media screen and (max-width: 767px) {
+  .filter__item {
+    margin: 7px 4px 8px 4px;
+  }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .filter__item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .filter__button {
@@ -1008,24 +999,34 @@ body {
 }
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(0px - var(--flex-margin) / 2);
+  display: block;
 }
 
-.skills__item {
-  margin: calc(var(--flex-margin) / 2);
+@media screen and (min-width: 768px) {
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(0px - var(--flex-margin) / 2);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skills__item:not(:last-child) {
+    margin-bottom: var(--flex-margin);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .skills__item {
     flex-basis: calc((100% - 2 * var(--flex-margin)) / 2);
+    margin: calc(var(--flex-margin) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .skills__item {
     flex-basis: calc((100% - 4 * var(--flex-margin)) / 4);
+    margin: calc(var(--flex-margin) / 2);
   }
 }
 
@@ -1102,29 +1103,39 @@ body {
 }
 
 .team {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(0px - var(--flex-margin) / 2);
+  display: block;
 }
 
-.team__section {
-  background-color: var(--alt-bkg-color);
+@media screen and (min-width: 768px) {
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(0px - var(--flex-margin) / 2);
+  }
 }
 
-.team__item {
-  margin: calc(var(--flex-margin) / 2);
+@media screen and (max-width: 767px) {
+  .team__item:not(:last-child) {
+    margin-bottom: var(--flex-margin);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .team__item {
     flex-basis: calc((100% - 2 * var(--flex-margin)) / 2);
+    margin: calc(var(--flex-margin) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .team__item {
     flex-basis: calc((100% - 4 * var(--flex-margin)) / 4);
+    margin: calc(var(--flex-margin) / 2);
   }
+}
+
+.team__section {
+  background-color: var(--alt-bkg-color);
 }
 
 .team__info {
@@ -1227,24 +1238,34 @@ body {
 }
 
 .examples {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(0px - var(--flex-margin) / 2);
+  display: block;
 }
 
-.examples__item {
-  margin: calc(var(--flex-margin) / 2);
+@media screen and (min-width: 768px) {
+  .examples {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(0px - var(--flex-margin) / 2);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .examples__item:not(:last-child) {
+    margin-bottom: var(--flex-margin);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .examples__item {
     flex-basis: calc((100% - 2 * var(--flex-margin)) / 2);
+    margin: calc(var(--flex-margin) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .examples__item {
-    flex-basis: calc((100% - 3 * var(--flex-margin)) / 3);
+    flex-basis: calc((100% - 4 * var(--flex-margin)) / 4);
+    margin: calc(var(--flex-margin) / 2);
   }
 }
 

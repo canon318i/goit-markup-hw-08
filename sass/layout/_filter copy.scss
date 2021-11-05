@@ -1,9 +1,9 @@
 .filter {
+  // @include flex();
   display: flex;
-  @media screen and (max-width: 767px) {
-    flex-wrap: wrap;
-    margin: -7px -4px 27px -4px;
-  }
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
   @media screen and (min-width: 768px) {
     justify-content: center;
     align-items: center;
@@ -12,15 +12,11 @@
 }
 
 .filter__item {
-  @media screen and (max-width: 767px) {
-    margin: 7px 4px 8px 4px;
-  }
+  margin-bottom: 15px;
 }
 
 .filter__item:not(:last-child) {
-  @media screen and (min-width: 768px) {
-    margin-right: 8px;
-  }
+  margin-right: 8px;
 }
 
 .filter__button {
